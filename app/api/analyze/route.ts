@@ -1,5 +1,6 @@
 import Groq from "groq-sdk";
 import { NextResponse } from "next/server";
+export const runtime = "nodejs"
 
 const ADVISOR_SYSTEM_PROMPT = `You are an expert AI Career Advisor and Workforce Analyst.
 Your job is to provide ACCURATE, NON-GENERIC, ROLE-SPECIFIC career guidance.
