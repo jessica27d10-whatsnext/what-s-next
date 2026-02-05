@@ -1,48 +1,71 @@
-🚀 What’s Next
-GenAI-Augmented Career Path Recommendation with Skill Gap Analysis & Job Market Forecasting
+# 🚀 What's Next  
+### GenAI-Augmented Career Path Recommendation with Skill Gap Analysis & Job Market Forecasting
 
-What’s Next is an AI-powered career intelligence platform that analyzes a user’s resume or profile, identifies skill gaps, recommends suitable career paths, generates a structured career roadmap, and provides job market insights using large language models.
+**What's Next** is an AI-powered career intelligence platform that analyzes user resumes or profile data to recommend suitable career paths, identify skill gaps, generate structured career roadmaps, and provide future job market insights.
 
-The system is designed as a decision-support tool, not just a recommendation engine, focusing on realism, explainability, and future readiness.
+The system is designed as a **decision-support platform**, combining Generative AI reasoning with deterministic scoring to ensure realistic and explainable outcomes.
 
-📌 Key Features
+---
 
-📄 Resume Upload & Parsing
+## ✨ Features
 
-Upload PDF resumes for automatic analysis
+- 📄 Resume upload (PDF) and intelligent profile extraction  
+- 🧠 AI-driven career recommendations with match scores  
+- 📊 Skill gap analysis with visual comparison  
+- 🗺️ Multi-phase career roadmap generation (6–18 months)  
+- 📈 Job market forecasting (demand, salary trend, emerging skills)  
+- 🤖 Context-aware AI chatbot  
+- 📥 Downloadable career intelligence report (PDF)
 
-Extracts skills, experience, education, and interests
+---
 
-🧠 AI Career Recommendations
+## 🧠 AI Architecture
 
-Top career paths ranked by relevance
+User Input / Resume
+↓
+Text Extraction & Cleaning
+↓
+Stage 1: Profile Extraction (LLM)
+↓
+Structured Profile (JSON)
+↓
+Stage 2: Career Intelligence Engine (LLM)
+↓
+Skill Gap + Roadmap + Forecast
+↓
+Scoring & Validation Layer
+↓
+Frontend Visualization
 
-Match scores based on skill overlap, experience, and market demand
 
-📊 Skill Gap Analysis
+This **multi-stage prompt pipeline** improves accuracy, consistency, and reduces hallucinations.
 
-Identifies missing or weak skills for each recommended career
+---
 
-Visual comparison between current skills and market requirements
+## 🛠 Tech Stack
 
-🗺️ Career Roadmap Generator
+### Frontend
+- Next.js (React)
+- Tailwind CSS
+- Chart libraries for visualization
 
-Structured multi-phase roadmap (6–18 months)
+### Backend
+- Next.js API Routes (Node.js)
+- Resume parsing & validation logic
 
-Clear objectives, skills to acquire, actions, and success metrics
+### AI / LLM
+- Groq API
+- LLaMA 3.1 (70B)
+- Low-temperature deterministic prompting
 
-📈 Job Market Forecast
+### Deployment
+- Vercel (Frontend + Backend)
 
-Demand trends, salary outlook, and emerging skills
+---
 
-Focus on future-proof and automation-resilient roles
+## 🔐 Environment Variables
 
-🤖 AI Chatbot Assistant
+Create a `.env.local` file in the project root:
 
-Context-aware chatbot for career-related queries
-
-Uses the analyzed profile for personalized answers
-
-📥 Downloadable Career Report
-
-Export the full analysis as a PDF report
+```env
+GROQ_API_KEY=your_groq_api_key_here
